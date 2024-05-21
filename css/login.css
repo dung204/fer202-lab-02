@@ -1,0 +1,43 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.row > * {
+  padding-inline: 0;
+}
+
+.login-container > * {
+  min-height: 100vh;
+}
+
+.login-bg {
+  object-fit: cover;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #5b5b5b;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #5b5b5b;
+}
+
+.separator:not(:empty)::before {
+  margin-right: 0.5rem;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 0.5rem;
+}
