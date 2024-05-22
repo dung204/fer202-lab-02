@@ -11,26 +11,19 @@
     <script defer src="node_modules/@popperjs/core/dist/umd/popper-base.min.js"></script>
   </head>
   <body>
-    <div
-      class="row align-items-center justify-content-center login-container"
-      style="height: 100vh"
-    >
-      <div class="col-8 h-100">
-        <img
-          loading="lazy"
-          src="https://picsum.photos/1920/1080"
-          class="login-bg h-100 w-100"
-          alt="login-background"
-        />
+    <div class="row login-container" style="height: 100vh">
+      <div class="col-8 login-bg-container position-relative" style="height: 100vh">
+        <img class="login-bg h-100 w-100" loading="lazy" src="/img/login-bg.jpg" alt="login-bg" />
+        <div class="black-filter"></div>
       </div>
-      <div class="col-4 h-100">
-        <div class="row py-5 px-5 g-4">
+      <div class="col-4 form-container" style="height: 100vh">
+        <div class="row p-5 g-3">
           <div class="col-12">
             <h2 class="text-center">Login</h2>
           </div>
           <div class="col-12 g-5">
             <form action="">
-              <div class="row g-4">
+              <div class="row gy-4 gx-3">
                 <div class="col-12">
                   <label class="form-label" for="email"> Email address </label>
                   <div class="input-group">
@@ -87,14 +80,14 @@
                     Login with X
                   </button>
                 </div>
+                <div class="col-12 text-center">
+                  <p class="text-secondary mb-4">
+                    Don't have an account? <a href="/register.html">Register</a>
+                  </p>
+                  <a href="#">Forgot your password?</a>
+                </div>
               </div>
             </form>
-          </div>
-          <div class="col-12 text-center">
-            <p class="text-secondary mb-4">
-              Don't have an account? <a href="/register.html">Register</a>
-            </p>
-            <a href="#">Forgot your password?</a>
           </div>
         </div>
       </div>

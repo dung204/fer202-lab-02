@@ -3,12 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>Sign up</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="/css/login.css" />
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="node_modules/@popperjs/core/dist/umd/popper-base.min.js"></script>
   </head>
   <body>
-    <h1>Register page</h1>
+    <div class="row login-container" style="height: 100vh">
+      <div class="col-8 login-bg-container position-relative" style="height: 100vh">
+        <img class="login-bg h-100 w-100" loading="lazy" src="/img/login-bg.jpg" alt="login-bg" />
+        <div class="black-filter"></div>
+      </div>
+      <div class="col-4 form-container" style="height: 100vh">
+        <div class="row p-5 g-3">
+          <div class="col-12">
+            <h2 class="text-center">Register</h2>
+          </div>
+          <div class="col-12 g-5">
+            <form action="">
+              <div class="row gy-4 gx-3">
+                <div class="col-6">
+                  <label class="form-label" for="first">First name</label>
+                  <input type="text" class="form-control" placeholder="John" id="first" />
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="last"> Last name </label>
+                  <input type="email" class="form-control" placeholder="Doe" id="last" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="email">Email address</label>
+                  <div class="input-group">
+                    <label class="input-group-text" for="email">@</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="name@example.com"
+                      id="email"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="dob">Date of birth</label>
+                  <div class="input-group">
+                    <label class="input-group-text" for="dob">
+                      <i class="bi bi-cake2-fill"></i>
+                    </label>
+                    <input type="date" class="form-control" id="dob" />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="password">Password</label>
+                  <div class="input-group">
+                    <label class="input-group-text" for="password">
+                      <i class="bi bi-key-fill"></i>
+                    </label>
+                    <input type="password" class="form-control" id="password" />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="confirm-password">Confirm password</label>
+                  <div class="input-group">
+                    <label class="input-group-text" for="confirm-password">
+                      <i class="bi bi-key-fill"></i>
+                    </label>
+                    <input type="password" class="form-control" id="confirm-password" />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary w-100">Register</button>
+                </div>
+                <div class="col-12">
+                  <div class="separator">or register with</div>
+                </div>
+                <div class="col-12">
+                  <button type="button" class="btn btn-danger w-100">
+                    <i class="bi bi-google me-1"></i>
+                    Register with Google
+                  </button>
+                </div>
+                <div class="col-12">
+                  <button type="button" class="btn btn-primary w-100">
+                    <i class="bi bi-facebook me-1"></i>
+                    Register with Facebook
+                  </button>
+                </div>
+                <div class="col-12">
+                  <button type="button" class="btn btn-dark w-100">
+                    <i class="bi bi-twitter-x me-1"></i>
+                    Register with X
+                  </button>
+                </div>
+                <div class="col-12 text-center">
+                  <p class="text-secondary mb-4">
+                    Already have an account? <a href="/login.html">Login</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
