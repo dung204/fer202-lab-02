@@ -3,22 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Home - Rave Haven</title>
     <link rel="stylesheet" href="/css/inter.font.css" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="node_modules/@popperjs/core/dist/umd/popper-base.min.js"></script>
+    <script defer src="node_modules/@popperjs/core/dist/esm/popper.js"></script>
   </head>
   <body>
     <header class="row justify-content-center p-4 w-100 position-fixed top-0">
-      <div class="col-5 row justify-content-between text-uppercase fw-semibold">
-        <span class="col-auto">Home</span>
-        <span class="col-auto">About</span>
-        <span class="col-auto">Resources</span>
-        <span class="col-auto">Contact</span>
-      </div>
+      <nav class="col-5 row justify-content-between text-uppercase fw-semibold">
+        <span class="col-auto nav-item">Home</span>
+        <span class="col-auto nav-item">About</span>
+        <span class="col-auto nav-item">Playlist</span>
+        <span class="col-auto nav-item">News</span>
+        <span class="col-auto nav-item">Contact</span>
+      </nav>
     </header>
-    <section class="img-carousel" style="height: 300px; background-color: violet"></section>
+
+    <section id="carousel" class="carousel slide position-relative" data-bs-ride="carousel">
+      <div class="page-title text-center">
+        <h1>Rave Haven</h1>
+        <p class="mt-5">Your everything of Electronic Dance Music</p>
+      </div>
+      <div class="black-filter"></div>
+      <div class="carousel-inner w-100">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="/img/carousel-1.jpg" class="d-block w-100 h-100" alt="" />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="/img/carousel-2.jpg" class="d-block w-100 h-100" alt="" />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="/img/carousel-3.jpg" class="d-block w-100 h-100" alt="" />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="/img/carousel-4.jpg" class="d-block w-100 h-100" alt="" />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="/img/carousel-5.jpg" class="d-block w-100 h-100" alt="" />
+        </div>
+      </div>
+    </section>
     <footer></footer>
   </body>
 </html>
