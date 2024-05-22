@@ -2,6 +2,7 @@ const header = document.querySelector('header');
 const headerCarousel = document.querySelector('#header-carousel');
 const aboutSection = document.querySelector('#about');
 const playlistsSection = document.querySelector('#playlists');
+const newsSection = document.querySelector('#news');
 const divider = document.querySelector('.dividing-section');
 
 const homeBtn = document.querySelector('.nav-item.home');
@@ -41,6 +42,20 @@ newsBtn.onclick = () => {
       aboutSection.clientHeight +
       playlistsSection.clientHeight +
       divider.clientHeight,
+  );
+};
+
+contactBtn.onclick = () => {
+  // get the height + margin + padding of about section
+  window.scrollTo(
+    0,
+    headerCarousel.clientHeight +
+      divider.clientHeight +
+      aboutSection.clientHeight +
+      playlistsSection.clientHeight +
+      divider.clientHeight +
+      divider.clientHeight +
+      newsSection.clientHeight,
   );
 };
 

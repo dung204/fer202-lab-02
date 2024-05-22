@@ -148,3 +148,8 @@ header {
 #news .carousel-item:hover {
   background-position: 50%;
 }
+
+footer {
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
