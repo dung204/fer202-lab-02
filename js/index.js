@@ -1,9 +1,13 @@
 const header = document.querySelector('header');
-const carousel = document.querySelector('.carousel');
+const headerCarousel = document.querySelector('#header-carousel');
+const aboutSection = document.querySelector('#about');
+const playlistsSection = document.querySelector('#playlists');
+const divider = document.querySelector('.dividing-section');
 
 const homeBtn = document.querySelector('.nav-item.home');
 const aboutBtn = document.querySelector('.nav-item.about');
 const playlistBtn = document.querySelector('.nav-item.playlist');
+const newsBtn = document.querySelector('.nav-item.news');
 const merchBtn = document.querySelector('.nav-item.merch');
 const contactBtn = document.querySelector('.nav-item.contact');
 
@@ -16,7 +20,28 @@ homeBtn.onclick = () => {
 };
 
 aboutBtn.onclick = () => {
-  window.scrollTo(0, carousel.clientHeight - header.clientHeight);
+  window.scrollTo(0, headerCarousel.clientHeight - header.clientHeight);
+};
+
+playlistBtn.onclick = () => {
+  // get the height + margin + padding of about section
+
+  window.scrollTo(
+    0,
+    headerCarousel.clientHeight + divider.clientHeight + aboutSection.clientHeight,
+  );
+};
+
+newsBtn.onclick = () => {
+  // get the height + margin + padding of about section
+  window.scrollTo(
+    0,
+    headerCarousel.clientHeight +
+      divider.clientHeight +
+      aboutSection.clientHeight +
+      playlistsSection.clientHeight +
+      divider.clientHeight,
+  );
 };
 
 function setNavScrolled() {
