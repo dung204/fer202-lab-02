@@ -9,21 +9,23 @@
     <link rel="stylesheet" href="/css/index.css" />
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="node_modules/@popperjs/core/dist/esm/popper.js"></script>
+    <script defer src="/js/index.js"></script>
   </head>
   <body>
-    <header class="row justify-content-center p-4 w-100 position-fixed top-0">
-      <nav class="col-5 row justify-content-between text-uppercase fw-semibold">
-        <span class="col-auto nav-item">Home</span>
-        <span class="col-auto nav-item">About</span>
-        <span class="col-auto nav-item">Playlist</span>
-        <span class="col-auto nav-item">News</span>
-        <span class="col-auto nav-item">Contact</span>
+    <header class="navbar fixed-top row justify-content-center p-4">
+      <nav class="col-6 row justify-content-between text-uppercase fw-bold">
+        <span class="col-auto nav-item home">Home</span>
+        <span class="col-auto nav-item about">About</span>
+        <span class="col-auto nav-item playlist">Playlist</span>
+        <span class="col-auto nav-item news">News</span>
+        <span class="col-auto nav-item merch">Merch</span>
+        <span class="col-auto nav-item contact">Contact</span>
       </nav>
     </header>
 
     <section id="carousel" class="carousel slide position-relative" data-bs-ride="carousel">
-      <div class="page-title text-center">
-        <h1>Rave Haven</h1>
+      <div class="page-title-section text-center">
+        <h1 class="page-title section-title">Rave Haven</h1>
         <p class="mt-5">Your everything of Electronic Dance Music</p>
       </div>
       <div class="black-filter"></div>
@@ -42,6 +44,29 @@
         </div>
         <div class="carousel-item" data-bs-interval="4000">
           <img src="/img/carousel-5.jpg" class="d-block w-100 h-100" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="row justify-content-center py-5 mt-3" style="height: 100vh">
+      <div class="col-6">
+        <div class="row gx-5">
+          <div class="col-6">
+            <h1 class="section-title">About</h1>
+            <p class="mt-5 section-content about-section-content">
+              Founded in 2024, Rave Haven is a website that provides you with the latest news,
+              music, and merchandise of Electronic Dance Music. We are a group of people who are
+              passionate about EDM and want to share our passion with the world. Our goal is to
+              create a community of like-minded individuals who love EDM and want to connect with
+              others who share the same interests.
+            </p>
+          </div>
+          <div class="col-6">
+            <img
+              class="about-section-img w-100 h-100 shadow-lg rounded-3"
+              src="/img/about-section-img.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </section>

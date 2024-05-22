@@ -1,10 +1,39 @@
+body {
+  overflow-x: hidden;
+}
+
 header {
+  background-color: transparent;
   color: white;
   z-index: 100;
+  margin-inline: auto;
+  transition: all 0.3s;
+}
+
+.nav-scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: var(--bs-box-shadow-lg);
 }
 
 .nav-item {
   letter-spacing: 0.15rem;
+  cursor: pointer;
+  user-select: none;
+
+  background: -webkit-linear-gradient(left, #0099f7, #f11712);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-size: 300% 100%;
+  background-position: 0;
+  transition: all 0.3s;
+}
+
+.nav-item:hover {
+  background-position: 100%;
 }
 
 .carousel-inner {
@@ -15,7 +44,7 @@ header {
   display: inline-block;
 }
 
-.page-title {
+.page-title-section {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,14 +54,26 @@ header {
   font-size: 24px;
 }
 
-.page-title h1 {
+.page-title {
+  font-size: 90px !important;
+}
+
+.section-title {
   font-weight: 900;
-  font-size: 90px;
   background: -webkit-linear-gradient(left, #0099f7, #f11712);
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 60px;
+}
+
+.section-content {
+  font-size: 20px;
+}
+
+.about-section-content {
+  text-align: justify;
 }
 
 .black-filter {
