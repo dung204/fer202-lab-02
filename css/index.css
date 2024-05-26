@@ -20,12 +20,36 @@ a:hover {
   background-position: 100%;
 }
 
+p,
+label,
+input {
+  font-size: var(--font-size-base);
+}
+
 header {
   background-color: transparent;
   color: white;
   z-index: 100;
   margin-inline: auto;
   transition: all 0.3s;
+}
+
+@media (max-width: 992px) {
+  header {
+    background-color: white;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.list-icon {
+  background: -webkit-linear-gradient(left, #0099f7, #f11712);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-scrolled {
@@ -54,12 +78,18 @@ header {
   background-position: 100%;
 }
 
+#header-carousel {
+  height: 100vh;
+}
+
 .carousel-inner {
   max-height: 100vh;
 }
 
 .carousel-inner img {
   display: inline-block;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .page-title-section {
@@ -69,11 +99,10 @@ header {
   translate: -50% -50%;
   z-index: 10;
   color: white;
-  font-size: 24px;
 }
 
 .page-title {
-  font-size: 90px !important;
+  font-size: var(--font-size-4xl) !important;
 }
 
 .section-title {
@@ -83,11 +112,7 @@ header {
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 60px;
-}
-
-.section-content {
-  font-size: 20px;
+  font-size: var(--font-size-2xl);
 }
 
 .about-section-content {
@@ -152,4 +177,8 @@ header {
 footer {
   background-color: rgb(32, 32, 32);
   color: white;
+}
+
+footer p {
+  font-size: var(--font-size-sm);
 }

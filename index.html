@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Rave Haven</title>
+    <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/inter.font.css" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="/css/index.css" />
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="node_modules/@popperjs/core/dist/esm/popper.js"></script>
     <script defer src="/js/index.js"></script>
   </head>
   <body>
-    <header class="navbar fixed-top row justify-content-center p-4">
-      <nav class="col-6 row justify-content-between text-uppercase fw-bold">
+    <header class="navbar fixed-top row justify-content-center">
+      <nav
+        class="nav-desktop col-xxl-6 col-lg-8 d-lg-flex d-none row justify-content-between text-uppercase fw-bold p-3"
+      >
         <span class="col-auto nav-item home">Home</span>
         <span class="col-auto nav-item about">About</span>
         <span class="col-auto nav-item playlist">Playlists</span>
@@ -23,38 +27,54 @@
           <a href="/login.html">Login</a>
         </span>
       </nav>
+
+      <nav class="nav-mobile col-auto d-block d-lg-none p-1">
+        <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-toggler">
+          <i class="bi bi-list fs-2 list-icon"></i>
+        </div>
+      </nav>
+      <div class="row collapse navbar-collapse fw-bold p-3 d-lg-none" id="navbar-toggler">
+        <span class="col-12 nav-item home">Home</span>
+        <span class="col-12 nav-item about">About</span>
+        <span class="col-12 nav-item playlist">Playlists</span>
+        <span class="col-12 nav-item news">News</span>
+        <span class="col-12 nav-item contact">Contact</span>
+        <span class="col-12 nav-item">
+          <a href="/login.html">Login</a>
+        </span>
+      </div>
     </header>
 
     <section id="header-carousel" class="carousel slide position-relative" data-bs-ride="carousel">
       <div class="page-title-section text-center">
-        <h1 class="page-title section-title">Rave Haven</h1>
+        <h2 class="section-title page-title">Rave Haven</h2>
         <p class="mt-5">Your everything of Electronic Dance Music</p>
       </div>
       <div class="black-filter"></div>
       <div class="carousel-inner w-100">
         <div class="carousel-item active" data-bs-interval="4000">
-          <img src="/img/carousel-1.jpg" class="d-block w-100 h-100" alt="" />
+          <img src="/img/carousel-1.jpg" class="d-block w-100" alt="" />
         </div>
         <div class="carousel-item" data-bs-interval="4000">
-          <img src="/img/carousel-2.jpg" class="d-block w-100 h-100" alt="" />
+          <img src="/img/carousel-2.jpg" class="d-block w-100" alt="" />
         </div>
         <div class="carousel-item" data-bs-interval="4000">
-          <img src="/img/carousel-3.jpg" class="d-block w-100 h-100" alt="" />
+          <img src="/img/carousel-3.jpg" class="d-block w-100" alt="" />
         </div>
         <div class="carousel-item" data-bs-interval="4000">
-          <img src="/img/carousel-4.jpg" class="d-block w-100 h-100" alt="" />
+          <img src="/img/carousel-4.jpg" class="d-block w-100" alt="" />
         </div>
         <div class="carousel-item" data-bs-interval="4000">
-          <img src="/img/carousel-5.jpg" class="d-block w-100 h-100" alt="" />
+          <img src="/img/carousel-5.jpg" class="d-block w-100" alt="" />
         </div>
       </div>
     </section>
     <section id="about" class="row justify-content-center py-5 mt-5">
-      <div class="col-6">
-        <div class="row gx-5">
-          <div class="col-6">
+      <div class="col-xxl-6 col-lg-8 col-10">
+        <div class="row gx-5 gy-2">
+          <div class="col-md-6 col-12">
             <h1 class="section-title">About</h1>
-            <p class="mt-5 section-content about-section-content">
+            <p class="section-content about-section-content">
               Founded in 2024, Rave Haven is a website that provides you with the latest news,
               music, and merchandise of Electronic Dance Music. We are a group of people who are
               passionate about EDM and want to share our passion with the world. Our goal is to
@@ -62,7 +82,7 @@
               others who share the same interests.
             </p>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <img
               class="about-section-img w-100 h-100 shadow-lg rounded-3"
               src="/img/about-section-img.jpg"
@@ -74,72 +94,72 @@
     </section>
     <section class="dividing-section py-5"></section>
     <section id="playlists" class="row justify-content-center py-5 mt-2 gy-5">
-      <div class="col-6 text-center">
-        <h1 class="section-title">Playlists</h1>
+      <div class="col-xxl-6 col-lg-8 col-10 text-center">
+        <h2 class="section-title">Playlists</h2>
         <p class="section-content">
           Beyond the beat. Expertly crafted playlists for every need, at your fingertips. Pick
           yourself a genre, and you're ready to go.
         </p>
       </div>
-      <div class="col-8 py-4">
+      <div class="col-lg-8 col-10 py-4">
         <div class="row g-5">
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-12">
             <div class="genre-item px-4 py-5 rounded-3 position-relative">
               <img loading="lazy" src="/img/carousel-1.jpg" alt="" />
               <h4>House</h4>
               <div class="black-filter"></div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-12">
             <div class="genre-item px-4 py-5 rounded-3 position-relative">
               <img loading="lazy" src="/img/carousel-3.jpg" alt="" />
               <h4>Techno</h4>
               <div class="black-filter"></div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-12">
             <div class="genre-item px-4 py-5 rounded-3 position-relative">
               <img loading="lazy" src="/img/carousel-5.jpg" alt="" />
               <h4>Trance</h4>
               <div class="black-filter"></div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-12">
             <div class="genre-item px-4 py-5 rounded-3 position-relative">
               <img loading="lazy" src="/img/carousel-2.jpg" alt="" />
               <h4>Big Room</h4>
               <div class="black-filter"></div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-12">
             <div class="genre-item px-4 py-5 rounded-3 position-relative">
               <img loading="lazy" src="/img/carousel-4.jpg" alt="" />
               <h4>Hardstyle</h4>
               <div class="black-filter"></div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-12">
             <div class="genre-item px-4 py-5 rounded-3 position-relative">
               <img loading="lazy" src="/img/carousel-5.jpg" alt="" />
               <h4>Hardcore</h4>
               <div class="black-filter"></div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-12">
             <div class="genre-item px-4 py-5 rounded-3 position-relative">
               <img loading="lazy" src="/img/carousel-4.jpg" alt="" />
               <h4>Tropical House</h4>
               <div class="black-filter"></div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-12">
             <div class="genre-item px-4 py-5 rounded-3 position-relative">
               <img loading="lazy" src="/img/carousel-2.jpg" alt="" />
               <h4>Psytrance</h4>
               <div class="black-filter"></div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-12">
             <div class="genre-item px-4 py-5 rounded-3 position-relative">
               <img loading="lazy" src="/img/carousel-1.jpg" alt="" />
               <h4>Dance Pop</h4>
@@ -148,24 +168,24 @@
           </div>
         </div>
       </div>
-      <div class="col-6 text-center">
+      <div class="col-xxl-6 col-lg-8 col-10 text-center">
         <p class="section-content">... a featured artist would be perfect, too.</p>
       </div>
-      <div class="col-8">
+      <div class="col-lg-8 col-10">
         <div class="genre-item p-5 rounded-3 position-relative">
           <img loading="lazy" src="/img/hardwell.jpg" alt="" />
           <h4>Hardwell</h4>
           <div class="black-filter"></div>
         </div>
       </div>
-      <div class="col-8">
+      <div class="col-lg-8 col-10">
         <div class="genre-item p-5 rounded-3 position-relative">
           <img loading="lazy" src="/img/armin-van-buuren.jpg" alt="" />
           <h4>Armin van Buuren</h4>
           <div class="black-filter"></div>
         </div>
       </div>
-      <div class="col-8">
+      <div class="col-lg-8 col-10">
         <div class="genre-item p-5 rounded-3 position-relative">
           <img loading="lazy" src="/img/martin-garrix.jpg" alt="" />
           <h4>Martin Garrix</h4>
@@ -179,16 +199,16 @@
     <section class="dividing-section py-5"></section>
     <section id="news" class="row justify-content-center py-5 gx-3">
       <div class="col-10">
-        <div class="row">
-          <div class="col-6">
-            <h1 class="section-title">News</h1>
+        <div class="row gy-3">
+          <div class="col-md-6 col-12">
+            <h2 class="section-title">News</h2>
             <p class="section-content">
               Stay up-to-date with the latest news in the world of Electronic Dance Music. From new
               releases to upcoming events, we've got you covered.
             </p>
             <a href="#">View all news</a>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <section
               id="news-carousel"
               class="carousel slide position-relative"
@@ -248,10 +268,10 @@
     </section>
     <section class="dividing-section py-5"></section>
     <section id="about" class="row justify-content-center py-5 mt-2">
-      <div class="col-6">
+      <div class="col-xxl-6 col-lg-8 col-10">
         <div class="row">
           <div class="col-12 text-center">
-            <h1 class="section-title">Contact</h1>
+            <h2 class="section-title">Contact</h2>
             <p class="section-content">
               Have a question or feedback? Feel free to reach out to us. We'd love to hear from you!
             </p>
@@ -259,11 +279,11 @@
           <div class="col-12">
             <form action="" class="mt-5">
               <div class="row gy-5 gx-3">
-                <div class="col-6">
+                <div class="col-sm-6 col-12">
                   <label class="form-label" for="first">First name</label>
                   <input type="text" class="form-control" placeholder="John" id="first" />
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6 col-12">
                   <label class="form-label" for="last"> Last name </label>
                   <input type="email" class="form-control" placeholder="Doe" id="last" />
                 </div>
@@ -301,7 +321,7 @@
       </div>
     </section>
     <footer class="row justify-content-center">
-      <div class="col-6 text-center py-4">
+      <div class="col-xxl-6 col-lg-8 col-10 text-center py-4">
         <p>&copy; 2024 Rave Haven. All rights reserved.</p>
         <p>Made by <a href="https://github.com/dung204">Mantrilogix - dung204 - Ho Anh Dung</a></p>
       </div>

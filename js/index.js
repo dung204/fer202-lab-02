@@ -1,63 +1,78 @@
 const header = document.querySelector('header');
 const headerCarousel = document.querySelector('#header-carousel');
+const navToggled = document.querySelector('.navbar .navbar-collapse');
 const aboutSection = document.querySelector('#about');
 const playlistsSection = document.querySelector('#playlists');
 const newsSection = document.querySelector('#news');
 const divider = document.querySelector('.dividing-section');
 
-const homeBtn = document.querySelector('.nav-item.home');
-const aboutBtn = document.querySelector('.nav-item.about');
-const playlistBtn = document.querySelector('.nav-item.playlist');
-const newsBtn = document.querySelector('.nav-item.news');
-const merchBtn = document.querySelector('.nav-item.merch');
-const contactBtn = document.querySelector('.nav-item.contact');
+const homeButtons = Array.from(document.querySelectorAll('.nav-item.home'));
+const aboutButtons = Array.from(document.querySelectorAll('.nav-item.about'));
+const playlistButtons = Array.from(document.querySelectorAll('.nav-item.playlist'));
+const newsButtons = Array.from(document.querySelectorAll('.nav-item.news'));
+const merchButtons = Array.from(document.querySelectorAll('.nav-item.merch'));
+const contactButtons = Array.from(document.querySelectorAll('.nav-item.contact'));
 
 setNavScrolled();
 
 document.onscroll = setNavScrolled;
 
-homeBtn.onclick = () => {
-  window.scrollTo(0, 0);
-};
+homeButtons.forEach(btn => {
+  btn.onclick = () => {
+    navToggled.classList.remove('show');
+    window.scrollTo(0, 0);
+  };
+});
 
-aboutBtn.onclick = () => {
-  window.scrollTo(0, headerCarousel.clientHeight - header.clientHeight);
-};
+aboutButtons.forEach(btn => {
+  btn.onclick = () => {
+    navToggled.classList.remove('show');
+    window.scrollTo(0, headerCarousel.clientHeight);
+  };
+});
 
-playlistBtn.onclick = () => {
-  // get the height + margin + padding of about section
+playlistButtons.forEach(btn => {
+  btn.onclick = () => {
+    navToggled.classList.remove('show');
+    window.scrollTo(
+      0,
+      headerCarousel.clientHeight +
+        aboutSection.clientHeight +
+        divider.clientHeight +
+        header.clientHeight,
+    );
+  };
+});
 
-  window.scrollTo(
-    0,
-    headerCarousel.clientHeight + divider.clientHeight + aboutSection.clientHeight,
-  );
-};
+newsButtons.forEach(btn => {
+  btn.onclick = () => {
+    navToggled.classList.remove('show');
+    window.scrollTo(
+      0,
+      headerCarousel.clientHeight +
+        divider.clientHeight +
+        aboutSection.clientHeight +
+        playlistsSection.clientHeight +
+        divider.clientHeight,
+    );
+  };
+});
 
-newsBtn.onclick = () => {
-  // get the height + margin + padding of about section
-  window.scrollTo(
-    0,
-    headerCarousel.clientHeight +
-      divider.clientHeight +
-      aboutSection.clientHeight +
-      playlistsSection.clientHeight +
-      divider.clientHeight,
-  );
-};
-
-contactBtn.onclick = () => {
-  // get the height + margin + padding of about section
-  window.scrollTo(
-    0,
-    headerCarousel.clientHeight +
-      divider.clientHeight +
-      aboutSection.clientHeight +
-      playlistsSection.clientHeight +
-      divider.clientHeight +
-      divider.clientHeight +
-      newsSection.clientHeight,
-  );
-};
+contactButtons.forEach(btn => {
+  btn.onclick = () => {
+    navToggled.classList.remove('show');
+    window.scrollTo(
+      0,
+      headerCarousel.clientHeight +
+        divider.clientHeight +
+        aboutSection.clientHeight +
+        playlistsSection.clientHeight +
+        divider.clientHeight +
+        divider.clientHeight +
+        newsSection.clientHeight,
+    );
+  };
+});
 
 function setNavScrolled() {
   let scrollPosition = window.scrollY;
